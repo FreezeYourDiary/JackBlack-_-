@@ -23,12 +23,12 @@ void Deck::ShuffleDeck()
 
 }
 
-void Deck::PrintDeck() const
-{
-	for (Card c : cards) {
-		c.ShowCard();
-	}
-}
+// void Deck::PrintDeck() const
+// {
+// 	for (Card c : cards) {
+// 		c.ShowCard();
+// 	}
+// }
 
 Card Deck::getCurrentCard(Deck& deck, int n)
 {
