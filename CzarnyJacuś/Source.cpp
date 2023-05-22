@@ -17,7 +17,7 @@ int main() {
 	// deck.PrintDeck();
 	std::cout << "\n------------------------------\n";
 	deck.ShuffleDeck();
-	 deck.PrintDeck();
+	deck.PrintDeck();
 
 
 	Hand myHand;
@@ -25,22 +25,10 @@ int main() {
 	std::cout << "\n------------------------------\n";
 	myHand.DealHand(deck);
 	myHand2.DealHand(deck);
+	
+	myHand.AddCard(deck);
 	myHand.PrintHand();
-	char wybor;
-	std::cin >> wybor;
-	myHand.AddCard(deck, wybor);
-	myHand.PrintHand();
-	///*myHand.AddCard(deck,2);
-	//std::cout<<myHand.CountHand();
-	//myHand.PrintHand();*/
-	//char wybor;
-	//std::cin >> wybor;
-	//myHand.AddCard(deck,wybor);
-	//myHand.PrintHand();
-	//std::cout << "====================";
-	//deck.PrintDeck();
-
-	//
-
+	myHand2.AddCard(deck);
+	myHand2.PrintHand();
 }
 

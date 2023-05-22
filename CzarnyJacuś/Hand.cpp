@@ -1,5 +1,9 @@
 #include "Hand.h"
 
+Hand::Hand():maxSize(2),valueOfHand(0),temptest(0),hand(NULL)
+{
+}
+
 bool Hand::DealHand(Deck& deck) /*,std::vector<Card>& hand*/
 {
 	if (deck.getSize() < 2 * maxSize) {
@@ -20,7 +24,8 @@ bool Hand::DealHand(Deck& deck) /*,std::vector<Card>& hand*/
 void Hand::PrintHand() const
 {
 	std::cout << "\n Your hand is: ";
-	for (int i = 0; i < maxSize; i++) {
+	
+	for (int i = 0; i < maxSize+temptest; i++) {
 	this->hand[i].ShowCard();
 	}
 }
@@ -67,22 +72,10 @@ int Hand::CountHand()
 //}
 
 
-bool Hand::AddCard(Deck& deck, char yorn)
+bool Hand::AddCard(Deck& deck)
 {	
-	int c = 2;
-	switch (yorn) {
-	case 'y':
 	hand.push_back(deck.getCard());
 	deck.Erase();
-	std::cout << "\t Card added!\n";
+	temptest++;
 	return true;
-	break;
-
-	default:
-	std::cout << "\t Card not added!\n";
-	break;
-	return false;
-	}
-	
-	
 }

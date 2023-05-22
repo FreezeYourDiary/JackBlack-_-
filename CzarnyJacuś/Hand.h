@@ -6,17 +6,17 @@
 #include <vector>
 class Hand
 {
-	const int maxSize = 2;
-	int valueOfHand = 0;
-
+	const int maxSize;
+	int valueOfHand;
 	std::vector<Card> hand;
-	
+	int temptest;
 public:
+	Hand();
 	bool DealHand(Deck& deck) /*std::vector<Card>& hand*/;
 	void PrintHand()const;
 	int CountHand();
 
-	bool AddCard(Deck& deck, char yorn);
+	bool AddCard(Deck& deck);
 
 
 };
