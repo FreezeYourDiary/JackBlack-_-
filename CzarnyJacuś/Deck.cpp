@@ -1,11 +1,15 @@
 #include "Deck.h"
 
-void Deck::FillDeck()
+
+void Deck::FillDeck(int n)
+
 {
-	for (int r = (int)Rank::ACE; r <= (int)Rank::KING; r++) {
-		for (int s = (int)Suit::CLUBS; s <= (int)Suit::SPADES; s++) {
-			Card card((Rank)r, (Suit)s);
-			cards.push_back(card);
+	for (int i = n; i > 0; i--) {
+		for (int r = (int)Rank::ACE; r <= (int)Rank::KING; r++) {
+			for (int s = (int)Suit::CLUBS; s <= (int)Suit::SPADES; s++) {
+				Card card((Rank)r, (Suit)s);
+				cards.push_back(card);
+			}
 		}
 	}
 }
@@ -51,12 +55,6 @@ Card Deck::getCard()
 	return cards.front();
 }
 
-void Deck::showCards()
-{
-	for (Card c : cards) {
-		std::cout<< c.CardRank();
-	}
-}
 
 
 

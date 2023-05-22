@@ -26,7 +26,7 @@ void Hand::PrintHand() const
 	std::cout << "\n Your hand is: ";
 	
 	for (int i = 0; i < maxSize+temptest; i++) {
-	this->hand[i].ShowCard();
+		this->hand[i].ShowCard();
 	}
 }
 

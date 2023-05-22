@@ -10,20 +10,18 @@ int main() {
 
 	Deck deck;
 
-	deck.FillDeck();
-	// deck.PrintDeck();
+	deck.FillDeck(4);
 	std::cout << "\n------------------------------\n";
 	deck.ShuffleDeck();
-	deck.PrintDeck();
-	
+	std::cout << deck.getSize();
 
-	Hand myHand;
+
+
+	/*Hand myHand;
 	Hand myHand2;
-	std::cout << "\n------------------------------\n";
 	myHand.DealHand(deck);
-	myHand2.DealHand(deck);
-
-	deck.showCards();
+	myHand2.DealHand(deck);*/
 	
+
 }
 

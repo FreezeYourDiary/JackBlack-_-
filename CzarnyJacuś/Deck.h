@@ -7,13 +7,12 @@
 class Deck
 {
 	std::vector<Card> cards;
-	std::string card_name;
-	int maxDeckSize = 52;
+	
 
 public:
 	
 
-	void FillDeck();
+	void FillDeck(int n);
 	void ShuffleDeck();
 	void PrintDeck()const;
 // теж для в подальшому для Hand.cpp, бо маю колоду std::vector<Card> cards в private: і не маю до неї доступу з інших функцій
@@ -22,8 +21,6 @@ public:
 	int getSize();
 
 	Card getCard();
-
-	void showCards();
 
 	//void PrintDeckInWords(Rank& r, Suit& s);
 };

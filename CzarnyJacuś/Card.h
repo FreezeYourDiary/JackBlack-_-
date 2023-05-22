@@ -8,6 +8,7 @@ class Card
 	Suit suit;
 	int value;
 	
+	
 	/*std::vector<const char*> cardFace;*/
 public:
 	
@@ -17,12 +18,12 @@ public:
 
 	void ShowCard() const;	
 	int getValue() const;
-	const char* CardRank()const;
+	
 	// test
-	/*void CardinText();*/
+	// const char* CardRank()const;
+	// void PrintCard() const;
 
-	/*const char* cardFaceS();*/
-	Rank getRank() const;
-	Suit getSuit() const;
+	/*Rank getRank() const;
+	Suit getSuit() const;*/
 };
 
