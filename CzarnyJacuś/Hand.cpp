@@ -79,3 +79,8 @@ bool Hand::AddCard(Deck& deck)
 	temptest++;
 	return true;
 }
+
+void Hand::ClearHand()
+{
+	hand.clear();
+}

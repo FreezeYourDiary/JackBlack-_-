@@ -18,7 +18,7 @@ public:
 
 	bool AddCard(Deck& deck);
 
-
+	void ClearHand();
 };
 
 
