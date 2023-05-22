@@ -40,12 +40,12 @@ int Card::getValue() const
 
 // зробив для теста
 
-Rank Card::ShowRank() const
-{
-	return this->rank;
-}
-
-Suit Card::ShowSuit() const
-{
-	return this->suit;
-}
+//Rank Card::ShowRank() const
+//{
+//	return this->rank;
+//}
+//
+//Suit Card::ShowSuit() const
+//{
+//	return this->suit;
+//}

@@ -9,25 +9,30 @@
 
 
 int main() {
-	
+
 
 	Deck deck;
-	
+
 	deck.FillDeck();
-	deck.PrintDeck();
+	// deck.PrintDeck();
 	std::cout << "\n------------------------------\n";
 	deck.ShuffleDeck();
-	deck.PrintDeck();
+	// deck.PrintDeck();
 
-	
+
 	Hand myHand;
-	std::vector <Card> hand1;
-
 
 	std::cout << "\n------------------------------\n";
-	myHand.DealHand(deck, hand1);
+	myHand.DealHand(deck);
 	deck.PrintDeck();
+	std::cout << "\tHand: \n";
+	std::cout<<myHand.CountHand();
+	myHand.PrintHand();
 
-	myHand.CountHand(hand1);
+	
+	/*myHand.AddCard(deck,2);
+	std::cout<<myHand.CountHand();
+	myHand.PrintHand();*/
+
 }
 

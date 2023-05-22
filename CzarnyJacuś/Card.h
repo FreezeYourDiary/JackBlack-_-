@@ -17,7 +17,7 @@ public:
 	int getValue() const;
 
 	// test
-	Rank ShowRank() const;
-	Suit ShowSuit() const;
+	//Rank ShowRank() const;
+	//Suit ShowSuit() const;
 };
 
