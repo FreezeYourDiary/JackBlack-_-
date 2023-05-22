@@ -51,6 +51,13 @@ Card Deck::getCard()
 	return cards.front();
 }
 
+void Deck::showCards()
+{
+	for (Card c : cards) {
+		std::cout<< c.CardRank();
+	}
+}
+
 
 
 

@@ -7,22 +7,21 @@ class Card
 	Rank rank;
 	Suit suit;
 	int value;
-	const char* cardNameR;
-	const char* cardNameS;
 	
+	/*std::vector<const char*> cardFace;*/
 public:
 	
 	Card();
 	~Card();
 	Card(Rank rank, Suit suit);
 
-	
-	void ShowCard() const;
-	
+	void ShowCard() const;	
 	int getValue() const;
-
-	void CardinText();
+	const char* CardRank()const;
 	// test
+	/*void CardinText();*/
+
+	/*const char* cardFaceS();*/
 	Rank getRank() const;
 	Suit getSuit() const;
 };

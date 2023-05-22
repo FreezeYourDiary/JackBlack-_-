@@ -17,6 +17,13 @@ int main() {
 	deck.PrintDeck();
 	
 
+	Hand myHand;
+	Hand myHand2;
+	std::cout << "\n------------------------------\n";
+	myHand.DealHand(deck);
+	myHand2.DealHand(deck);
+
+	deck.showCards();
 	
 }
 
