@@ -18,7 +18,7 @@ public:
 	void ShuffleDeck();
 
 	void PrintDeck()const;
-// теж для в подальшому для Hand.cpp, бо маю колоду std::vector<Card> cards в private: і не маю до неї доступу
+// теж для в подальшому для Hand.cpp, бо маю колоду std::vector<Card> cards в private: і не маю до неї доступу з інших функцій
 	Card getCurrentCard(Deck& deck, int n);
 	
 	void Erase();

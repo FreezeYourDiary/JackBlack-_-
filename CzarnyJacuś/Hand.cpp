@@ -62,8 +62,23 @@ int Hand::CountHand()
 //}
 
 
-void Hand::AddCard(Deck& deck,int c)
-{
+bool Hand::AddCard(Deck& deck, char yorn)
+{	
+	int c = 2;
+	switch (yorn) {
+	case 'y':
 	hand.push_back(deck.getCurrentCard(deck, c));
 	deck.Erase();
+	std::cout << "\t Card added!\n";
+
+	return true;
+	break;
+
+	default:
+	std::cout << "\t Card not added!\n";
+	break;
+	return false;
+	}
+	
+	
 }

@@ -16,7 +16,7 @@ public:
 	void PrintHand()const;
 	int CountHand();
 
-	void AddCard(Deck& deck, int c);
+	bool AddCard(Deck& deck, char yorn);
 };
 
 
