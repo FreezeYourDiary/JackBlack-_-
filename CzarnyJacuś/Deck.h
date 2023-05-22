@@ -26,6 +26,8 @@ public:
 	int getSize();
 
 	Card getCard();
+
+	//void PrintDeckInWords(Rank& r, Suit& s);
 };
 
 
