@@ -25,6 +25,7 @@ void Deck::ShuffleDeck()
 
  void Deck::PrintDeck() const
  {
+	 std::cout << "Current Deck situation: ";
  	for (Card c : cards) {
  		c.ShowCard();
  	}
@@ -43,6 +44,11 @@ void Deck::Erase()
 int Deck::getSize()
 {
 	return cards.size();
+}
+
+Card Deck::getCard()
+{
+	return cards.front();
 }
 
 

@@ -21,26 +21,26 @@ int main() {
 
 
 	Hand myHand;
-
+	Hand myHand2;
 	std::cout << "\n------------------------------\n";
 	myHand.DealHand(deck);
-	deck.PrintDeck();
-	std::cout << "\tHand: \n";
-	std::cout<<myHand.CountHand();
+	myHand2.DealHand(deck);
 	myHand.PrintHand();
-
-	
-	/*myHand.AddCard(deck,2);
-	std::cout<<myHand.CountHand();
-	myHand.PrintHand();*/
 	char wybor;
 	std::cin >> wybor;
-	myHand.AddCard(deck,wybor);
+	myHand.AddCard(deck, wybor);
 	myHand.PrintHand();
-	std::cout << "====================";
-	deck.PrintDeck();
+	///*myHand.AddCard(deck,2);
+	//std::cout<<myHand.CountHand();
+	//myHand.PrintHand();*/
+	//char wybor;
+	//std::cin >> wybor;
+	//myHand.AddCard(deck,wybor);
+	//myHand.PrintHand();
+	//std::cout << "====================";
+	//deck.PrintDeck();
 
-	
+	//
 
 }
 

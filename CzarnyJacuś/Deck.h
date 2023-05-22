@@ -24,6 +24,8 @@ public:
 	void Erase();
 
 	int getSize();
+
+	Card getCard();
 };
 
 

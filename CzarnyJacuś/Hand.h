@@ -17,6 +17,8 @@ public:
 	int CountHand();
 
 	bool AddCard(Deck& deck, char yorn);
+
+
 };
 
 
