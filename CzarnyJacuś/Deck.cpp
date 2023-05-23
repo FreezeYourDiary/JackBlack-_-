@@ -50,6 +50,30 @@ int Deck::getSize()
 	return cards.size();
 }
 
+void Deck::whatDeck()
+
+{
+	std::cout << "On which deck you want to play,type 1 if you want standart deck with 52 Cards, 2 if doubled, 4 if you want to play with 208 card deck: ?\n";
+	
+	char n;
+	std::cin >> n;
+	switch (n) {
+	case '1':
+		FillDeck(1);
+		break;
+	case '2':
+		FillDeck(2);
+		break;
+	case '4':
+		FillDeck(4);
+		break;
+	default:
+		std::cout << "Enter number from 1,2 or 4: ";
+		whatDeck();
+		break;
+	}
+}
+
 Card Deck::getCard()
 {
 	return cards.front();

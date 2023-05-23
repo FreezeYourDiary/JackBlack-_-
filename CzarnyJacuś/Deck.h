@@ -20,6 +20,8 @@ public:
 	void Erase();
 	int getSize();
 
+	void whatDeck();
+
 	Card getCard();
 
 	//void PrintDeckInWords(Rank& r, Suit& s);

@@ -10,6 +10,9 @@ private:
     char chose;
 public:
     Game();
+    
+    void Initialization();
+    void Menu();
     void gameRunning();
 };
 

@@ -6,9 +6,10 @@ class Player
 {
 	Hand hand;
 	int points;
-	const char* playerName;
+	std::string name;
 public:
-	void pickName(const char* Name);
+	std::string pickName();
+	std::string getName();
 	void DealHandToPlayer(Deck& deck, Hand& hand);
 	int countValue();
 	void hitCard();

@@ -11,7 +11,7 @@ Card::~Card()
 	
 }
 
-Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0)
+Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0), visibility(1)
 {
 	if (rank > 10) {
 		this->value = 10;
@@ -73,6 +73,7 @@ Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0)
 
 void Card::ShowCard() const
 {
+	if(visibility)
 	std::cout << this->rank << " of " << this->suit << std::endl;
 }
 //функція яка чогось по дебільному працює коли хочу показати карту в руці
@@ -80,7 +81,13 @@ void Card::ShowCard() const
 
 int Card::getValue() const
 {
+	if (visibility)
 	return this->value;
+}
+
+void Card::setVisibility(bool vis)
+{
+	this->visibility = vis;
 }
 
 //const char* Card::CardRank() const

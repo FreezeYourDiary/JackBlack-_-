@@ -8,7 +8,7 @@ class Card
 	Suit suit;
 	int value;
 	
-	
+	bool visibility;
 	/*std::vector<const char*> cardFace;*/
 public:
 	
@@ -19,6 +19,8 @@ public:
 	void ShowCard() const;	
 	int getValue() const;
 	
+	void setVisibility(bool vis);
+
 	// test
 	// const char* CardRank()const;
 	// void PrintCard() const;

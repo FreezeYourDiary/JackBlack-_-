@@ -1,9 +1,15 @@
 #include "Player.h"
 
-void Player::pickName(const char* Name)
+std::string Player::pickName()
 {
+    std::cout << "Hey, Pick your name(just type it below -_0): ";
+    std::cin >> this->name;
+    return name;
+}
 
-    this->playerName = Name;
+std::string Player::getName()
+{
+    return name;
 }
 
 void Player::DealHandToPlayer(Deck& deck, Hand& hand)
