@@ -1,5 +1,9 @@
 #include "Player.h"
 
+Player::Player()
+{
+}
+
 std::string Player::pickName()
 {
     std::cout << "Hey, Pick your name(just type it below -_0): ";
