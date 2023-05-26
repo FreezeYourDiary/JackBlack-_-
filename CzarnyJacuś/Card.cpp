@@ -11,7 +11,7 @@ Card::~Card()
 	
 }
 
-Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0), visibility(1)
+Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0)
 {
 	if (rank > 10) {
 		this->value = 10;
@@ -22,73 +22,92 @@ Card::Card(Rank rank, Suit suit) :rank(rank), suit(suit), value(0), visibility(1
 	}
 	// конструктор створює карту (бере дані з enum Rank і Suit), JACK, QUEEN, KING отримують вартості 10 як в блекджеку, інші просто як int починаючи з 1 до 10
 	
-	/*switch (rank) {
+	switch (rank) {
 		case ACE:
 			this->name = "ACE";
+			break;
 		case TWO:
 			this->name = "TWO";
+			break;
 		case THREE:
 			this->name = "THREE";
+			break;
 		case FOUR:
 			this->name = "FOUR";
+			break;
 		case FIVE:
 			this->name = "FIVE";
+			break;
 		case SIX:
 			this->name = "SIX";
+			break;
 		case SEVEN:
 			this->name = "SEVEN";
+			break;
 		case EIGHT:
 			this->name = "EIGHT";
+			break;
 		case NINE:
 			this->name = "NINE";
+			break;
 		case TEN:
 			this->name = "TEN";
+			break;
 		case JACK:
 			this->name = "JACK";
+			break;
 		case QUEEN:
 			this->name = "QUEEN";
+			break;
 		case KING:
 			this->name = "KING";
-
+			break;
 		default:
 			this->name = nullptr;
-			
+			break;
 		}
 	
 	switch (suit) {
 		case CLUBS:
-			this->color = "CLUBS";
+			this->name.append(" of CLUBS");
+			break;
 		case HEARTS:
-			this->color = "HEARTS";
+			this->name.append(" of HEARTS");
+			break;
 		case DIAMONDS:
-			this->color = "DIAMONDS";
+			this->name.append(" of DIAMONDS");
+			break;
 		case SPADES:
-			this->color = "SPADES";
+			this->name.append(" of SPADES");
+			break;
 		default:
-			
-			this->color = nullptr;
-		}*/
+			this->name = nullptr;
+			break;
+		}
 
 }
 
 void Card::ShowCard() const
 {
-	if(visibility)
-	std::cout << this->rank << " of " << this->suit << std::endl;
+	
+		std::cout << this->name << "\n";
 }
-//функція яка чогось по дебільному працює коли хочу показати карту в руці
+
 
 
 int Card::getValue() const
 {
-	if (visibility)
+	
 	return this->value;
 }
 
-void Card::setVisibility(bool vis)
+Rank Card::getRank() const
 {
-	this->visibility = vis;
+	return rank;
 }
+
+
+
 
 //const char* Card::CardRank() const
 //{

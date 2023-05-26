@@ -3,7 +3,8 @@
 #include "Header.h"
 #include <vector>
 #include <cstdlib>
-
+#include <time.h>
+#include <stdlib.h>
 class Deck
 {
 	std::vector<Card> cards;

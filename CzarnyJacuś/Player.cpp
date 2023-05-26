@@ -1,12 +1,15 @@
 #include "Player.h"
 
-Player::Player()
+
+
+
+Player::Player(): chips(1000), ch(0), name(" ")
 {
 }
 
 std::string Player::pickName()
 {
-    std::cout << "Hey, Pick your name(just type it below -_0): ";
+    std::cout << "Hey, Pick your name(just type it below ): ";
     std::cin >> this->name;
     return name;
 }
@@ -16,16 +19,18 @@ std::string Player::getName()
     return name;
 }
 
-void Player::DealHandToPlayer(Deck& deck, Hand& hand)
+void Player::clearName()
 {
-    this->hand.DealHand(deck);
+    name.clear();
 }
 
-int Player::countValue()
+int Player::getchips()
 {
-    return 0;
+    return chips;
 }
 
-void Player::hitCard()
-{
+
+int Player::addChips(int n) {
+    chips += n;
+    return chips;
 }

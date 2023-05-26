@@ -6,22 +6,25 @@
 #include <vector>
 class Hand
 {
-	const int maxSize;
+	int maxSize;
 	int valueOfHand;
 	std::vector<Card> hand;
-	int temptest;
-	
-	
+	bool visible;
+	int AceCount;
 public:
 	Hand();
 	bool DealHand(Deck& deck) /*std::vector<Card>& hand*/;
-	void PrintHand()const;
+	void PrintHand(bool visible);
 	int CountHand();
+	int setSize(int maxSize);
 
-	bool AddCard(Deck& deck);
+	bool Split(Hand& hand);
+	Card getCard(Hand& hand, int n);
+
+	Card AddCard(Deck& deck);
 	//дописати логіку до цієї що якшо рука роздана то її не можна роздати ще раз поки не очиститься
 	void ClearHand();
-
+	
 
 };
 

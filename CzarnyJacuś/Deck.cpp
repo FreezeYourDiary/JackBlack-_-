@@ -4,20 +4,23 @@
 void Deck::FillDeck(int n)
 
 {
+	
 	for (int i = n; i > 0; i--) {
 		for (int r = (int)Rank::ACE; r <= (int)Rank::KING; r++) {
 			for (int s = (int)Suit::CLUBS; s <= (int)Suit::SPADES; s++) {
-				Card card((Rank)r, (Suit)s);
-				cards.push_back(card);
+					Card card((Rank)r, (Suit)s);
+					cards.push_back(card);
 			}
 		}
 	}
+	
+	
 }
 
 void Deck::ShuffleDeck()
 {
 	Deck shuffeled;
-
+	srand(time(NULL));
 	while (!cards.empty()) {
 		size_t index = rand() % cards.size();
 		shuffeled.cards.push_back(cards[index]);
@@ -53,7 +56,7 @@ int Deck::getSize()
 void Deck::whatDeck()
 
 {
-	std::cout << "On which deck you want to play,type 1 if you want standart deck with 52 Cards, 2 if doubled, 4 if you want to play with 208 card deck: ?\n";
+	std::cout << "On which deck you want to play,type 1,2 or 4. \n 1 - 52 cards; \n 2 - 104 cards \n 4 - 208 cards";
 	
 	char n;
 	std::cin >> n;

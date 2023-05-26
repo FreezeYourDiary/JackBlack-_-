@@ -1,15 +1,15 @@
 #pragma once
 #include "Header.h"
 #include <iostream>
-
+using std::string;
 class Card
 {
 	Rank rank;
 	Suit suit;
 	int value;
 	
-	bool visibility;
-	/*std::vector<const char*> cardFace;*/
+	string name;
+	
 public:
 	
 	Card();
@@ -19,8 +19,7 @@ public:
 	void ShowCard() const;	
 	int getValue() const;
 	
-	void setVisibility(bool vis);
-
+	Rank getRank() const;
 	// test
 	// const char* CardRank()const;
 	// void PrintCard() const;
