@@ -4,10 +4,10 @@
 #include "Deck.h"
 #include "Hand.h"
 #include "Player.h"
-#include "BlackJack.h"
+#include "Blackjack.h"
 int main() {
 	
-	BlackJack game;
+	Blackjack game;
 	game.GameInit();
 	game.gameRunning();
 	
