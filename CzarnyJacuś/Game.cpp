@@ -1,4 +1,4 @@
-#include "Blackjack.h"
+#include "Game.h"
 
 Game::Game() :game(false), chose(0), bet(50)
 {
